@@ -1,11 +1,13 @@
-alert('boas vindas ao jogo secreto');
-let numero = 3;
-console.log(numero);
+
 let chute; 
 let tentativas = 1;
+let num = 1000 + 1
+alert('boas vindas ao jogo secreto');
+let numero = parseInt(Math.random() * num );
+console.log(numero);
 
 while(chute != numero){
-    chute = prompt('Escolha um numero de 1 ate 10');
+    chute = prompt(`Escolha um numero de 1 ate ${num}`);
     if (chute == numero){
        break;
     } else{
@@ -18,8 +20,5 @@ while(chute != numero){
     }
 }
 
-if(tentativas > 1){
-    alert(`Prabens!!! você acertou o numero secreto ${numero} em ${tentativas} tentativas`);
-}else{
-    alert(`Prabens!!! você acertou o numero secreto ${numero} em ${tentativas} tentativa`);
-}
+let palavra = tentativas > 1 ? 'tentativas' : 'tentativa';
+alert(`Prabens!!! você acertou o numero secreto ${numero} em ${tentativas} ${palavra} `);
