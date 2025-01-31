@@ -1,9 +1,9 @@
 
 let chute; 
 let tentativas = 1;
-let num = 1000 + 1
+let num = 1000 
 alert('boas vindas ao jogo secreto');
-let numero = parseInt(Math.random() * num );
+let numero = parseInt(Math.random() * num + 1 );
 console.log(numero);
 
 while(chute != numero){
